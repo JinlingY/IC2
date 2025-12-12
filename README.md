@@ -5,12 +5,9 @@ IC2 decipher interventional dynamical causality based solely on non-intervention
 #### 3-variable coupled system
 ##### 1 import packages
 ```python
-import numpy as np
-import torch
-from utils import logistic_3_system2
-import matplotlib.pyplot as plt
-import os
 from IC2 import IC2 # import our package
+import torch
+from IC2.utils import logistic_3_system 
 ```
 
 ##### 2 simlate 3-variable logistic system
