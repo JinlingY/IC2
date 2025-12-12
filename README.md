@@ -12,13 +12,16 @@ from IC2.utils import logistic_3_system
 
 ##### 2 simlate 3-variable logistic system
 ```python
+
 noise=0.001# noise strength
 beta = 0.35# causal/coupled strength
 num_steps = 5000# length of time series
+
 #Parameters about model
 xy_dim=12 #embedding dimension of the time series
 z_dim=6 #dimension of latent variables
-hid_dim=128 #dimension of hidden layyers
+hid_dim=128 #dimension of hidden layers
+
 #Weight
 weights1 = torch.tensor([0.35, 0.35, 0.10, 0.09, 0.28, 0.001,0.001])
 weights2 = torch.tensor([0.35, 0.35, 0.22, 0.09, 0.25, 0.001,0.001])
@@ -46,7 +49,7 @@ data6 = logistic_3_system(noise=noise, betaxy=0, betaxz=0, betayx=0, betayz=0, b
 # show the ground truth of the system
 #Ground truth
 #1 represents the direct causality from node i to node j; 
-#0 represents that there no causality between two nodes.
+#0 represents that there is no causality between two nodes.
 Net_ground1= torch.tensor([[0, 1, 0],
               [0, 0, 0],
               [0, 0, 0]])
